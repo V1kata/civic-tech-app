@@ -1,0 +1,38 @@
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Next.js
+frontend/.next/
+frontend/out/
+frontend/build/
+
+# Node modules
+node_modules/
+frontend/node_modules/
+
+# Python Virtual Environment
+venv/
+backend/venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
