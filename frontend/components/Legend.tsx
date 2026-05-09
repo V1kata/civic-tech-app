@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 
 interface LegendProps {
   types: string[];
@@ -50,7 +49,6 @@ export function Legend({
         </button>
 
         {types.map((type) => {
-          const count = types.filter((t) => t === type).length;
           return (
             <button
               key={type}
