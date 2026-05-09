@@ -1,36 +1,46 @@
 {
-  "timestamp": "2026-05-09T15:26:20.106239",
-  "count": 3,
+  "timestamp": "2026-05-09T17:32:01.261813",
+  "count": 4,
   "disruptions": [
     {
-      "id": "vasil_levski_blvd_1778329576.826084",
-      "street": "Vasil Levski Blvd",
-      "disruption_type": "Road works",
-      "start_date": "2024-05-15",
-      "end_date": "2024-05-20",
-      "latitude": 42.6913037,
-      "longitude": 23.3328148,
-      "scraped_at": "2026-05-09T15:26:16.826084"
+      "id": "ul_oborishte_1778340504.101",
+      "street": "ul. Oborishte",
+      "disruption_type": "Road works / Event closure",
+      "start_date": "2026-05-09",
+      "end_date": "2026-05-10",
+      "latitude": 42.695713,
+      "longitude": 23.332857,
+      "scraped_at": "2026-05-09T17:28:24.101000"
     },
     {
-      "id": "tsar_osvobodit_blvd_1778329577.923966",
-      "street": "Tsar Osvobodit Blvd",
-      "disruption_type": "Water main repair",
-      "start_date": "2024-05-18",
-      "end_date": "2024-05-25",
-      "latitude": 42.6977,
-      "longitude": 23.3219,
-      "scraped_at": "2026-05-09T15:26:17.923966"
+      "id": "bul_bulgaria_1778340504.202",
+      "street": "bul. Bulgaria",
+      "disruption_type": "Road works",
+      "start_date": "2026-05-12",
+      "end_date": "2026-05-17",
+      "latitude": 42.674312,
+      "longitude": 23.295488,
+      "scraped_at": "2026-05-09T17:28:24.202000"
     },
     {
-      "id": "vitosha_blvd_1778329579.103719",
-      "street": "Vitosha Blvd",
-      "disruption_type": "Road works",
-      "start_date": "2024-05-10",
-      "end_date": "2024-05-12",
-      "latitude": 42.68556,
-      "longitude": 23.3173991,
-      "scraped_at": "2026-05-09T15:26:19.103719"
+      "id": "jk_boyana_1778340504.303",
+      "street": "zh.k. Boyana",
+      "disruption_type": "Water outage",
+      "start_date": "2026-05-14T09:30:00",
+      "end_date": "2026-05-14T20:30:00",
+      "latitude": 42.646533,
+      "longitude": 23.268711,
+      "scraped_at": "2026-05-09T17:28:24.303000"
+    },
+    {
+      "id": "jk_druzhba_1_1778340504.404",
+      "street": "zh.k. Druzhba 1",
+      "disruption_type": "Water outage",
+      "start_date": "2026-05-11T09:00:00",
+      "end_date": "2026-05-11T19:00:00",
+      "latitude": 42.664555,
+      "longitude": 23.395622,
+      "scraped_at": "2026-05-09T17:28:24.404000"
     }
   ]
 }

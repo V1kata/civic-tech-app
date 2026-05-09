@@ -6,6 +6,7 @@ Output: JSON file with street names, coordinates, and disruption details
 
 import json
 import requests
+# pyrefly: ignore [missing-import]
 from bs4 import BeautifulSoup
 from datetime import datetime
 from typing import List, Dict, Any
@@ -13,6 +14,7 @@ import time
 
 # For geocoding (converting addresses to lat/lon)
 try:
+    # pyrefly: ignore [missing-import]
     from geopy.geocoders import Nominatim
 except ImportError:
     print("Install geopy: pip install geopy")
