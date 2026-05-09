@@ -1,46 +1,48 @@
 {
-  "timestamp": "2026-05-09T17:32:01.261813",
+  "timestamp": "2026-05-09T22:13:28.531974",
   "count": 4,
   "disruptions": [
     {
-      "id": "ul_oborishte_1778340504.101",
-      "street": "ul. Oborishte",
-      "disruption_type": "Road works / Event closure",
+      "id": "vasil_levski_blvd_1778353600.147743",
+      "street": "Vasil Levski Blvd",
+      "disruption_type": "Road works",
+      "start_date": "2024-05-15",
+      "end_date": "2024-05-20",
+      "latitude": 42.6934757,
+      "longitude": 23.3343983,
+      "scraped_at": "2026-05-09T22:06:40.147754"
+    },
+    {
+      "id": "tsar_osvobodit_blvd_1778353601.349852",
+      "street": "Tsar Osvobodit Blvd",
+      "disruption_type": "Water repair",
+      "start_date": "2024-05-18",
+      "end_date": "2024-05-25",
+      "latitude": 42.6977,
+      "longitude": 23.3219,
+      "scraped_at": "2026-05-09T22:06:41.349860"
+    },
+    {
+      "id": "vitosha_blvd_1778353602.587372",
+      "street": "Vitosha Blvd",
+      "disruption_type": "Road works",
+      "start_date": "2024-05-10",
+      "end_date": "2024-05-12",
+      "latitude": 42.68556,
+      "longitude": 23.3173991,
+      "scraped_at": "2026-05-09T22:06:42.587377"
+    },
+    {
+      "id": "water_зона_на_спиране-кво_1403347_1778354008.532",
+      "street": "зона на спиране-кв.Орландовци -ул.Железопътна пред магазин Билла",
+      "disruption_type": "Water repair",
+      "description": "Осигурена водоноска",
       "start_date": "2026-05-09",
       "end_date": "2026-05-10",
-      "latitude": 42.695713,
-      "longitude": 23.332857,
-      "scraped_at": "2026-05-09T17:28:24.101000"
-    },
-    {
-      "id": "bul_bulgaria_1778340504.202",
-      "street": "bul. Bulgaria",
-      "disruption_type": "Road works",
-      "start_date": "2026-05-12",
-      "end_date": "2026-05-17",
-      "latitude": 42.674312,
-      "longitude": 23.295488,
-      "scraped_at": "2026-05-09T17:28:24.202000"
-    },
-    {
-      "id": "jk_boyana_1778340504.303",
-      "street": "zh.k. Boyana",
-      "disruption_type": "Water outage",
-      "start_date": "2026-05-14T09:30:00",
-      "end_date": "2026-05-14T20:30:00",
-      "latitude": 42.646533,
-      "longitude": 23.268711,
-      "scraped_at": "2026-05-09T17:28:24.303000"
-    },
-    {
-      "id": "jk_druzhba_1_1778340504.404",
-      "street": "zh.k. Druzhba 1",
-      "disruption_type": "Water outage",
-      "start_date": "2026-05-11T09:00:00",
-      "end_date": "2026-05-11T19:00:00",
-      "latitude": 42.664555,
-      "longitude": 23.395622,
-      "scraped_at": "2026-05-09T17:28:24.404000"
+      "latitude": 42.718238,
+      "longitude": 23.343138,
+      "scraped_at": "2026-05-09T19:13:28.531626+00:00",
+      "source": "water_supply"
     }
   ]
 }

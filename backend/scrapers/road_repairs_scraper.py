@@ -147,7 +147,7 @@ class RoadsDisruptionScraper:
             },
             {
                 "street": "Tsar Osvobodit Blvd",
-                "type": "Water main repair",
+                "type": "Water repair",
                 "start_date": "2024-05-18",
                 "end_date": "2024-05-25",
             },

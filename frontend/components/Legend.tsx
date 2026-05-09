@@ -11,7 +11,7 @@ interface LegendProps {
 
 const disruptionColors: Record<string, string> = {
   "Road works": "bg-red-500",
-  "Water main repair": "bg-blue-500",
+  "Water repair": "bg-blue-500",
   "Water outage": "bg-blue-600",
   "Sewer repair": "bg-yellow-600",
   "Other": "bg-gray-500",

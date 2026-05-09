@@ -4,6 +4,7 @@
 interface Disruption {
   street: string;
   disruption_type: string;
+  description?: string;
   start_date: string;
   end_date: string;
   scraped_at: string;
@@ -39,6 +40,12 @@ export function DisruptionPopup({ disruption }: DisruptionPopupProps) {
             {disruption.disruption_type}
           </span>
         </div>
+        
+        {disruption.description && (
+          <div className="bg-gray-50 p-2 rounded text-gray-700 italic border border-gray-100">
+            {disruption.description}
+          </div>
+        )}
         
         <div className="grid grid-cols-2 gap-2">
           <div>

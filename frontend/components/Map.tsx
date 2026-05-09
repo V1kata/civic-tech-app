@@ -44,6 +44,7 @@ const waterIcon = L.icon({
 interface Disruption {
   id: string;
   street: string;
+  description?: string;
   disruption_type: string;
   start_date: string;
   end_date: string;
