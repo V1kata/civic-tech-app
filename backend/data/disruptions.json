@@ -1,47 +1,79 @@
 {
-  "timestamp": "2026-05-09T22:13:28.531974",
+  "timestamp": "2026-05-10T14:09:49.318712",
   "count": 4,
   "disruptions": [
     {
-      "id": "vasil_levski_blvd_1778353600.147743",
+      "id": "vasil_levski_blvd_1778410761.761212",
       "street": "Vasil Levski Blvd",
       "disruption_type": "Road works",
       "start_date": "2024-05-15",
       "end_date": "2024-05-20",
       "latitude": 42.6934757,
       "longitude": 23.3343983,
-      "scraped_at": "2026-05-09T22:06:40.147754"
+      "scraped_at": "2026-05-10T13:59:21.761329"
     },
     {
-      "id": "tsar_osvobodit_blvd_1778353601.349852",
+      "id": "tsar_osvobodit_blvd_1778410762.932958",
       "street": "Tsar Osvobodit Blvd",
       "disruption_type": "Water repair",
       "start_date": "2024-05-18",
       "end_date": "2024-05-25",
       "latitude": 42.6977,
       "longitude": 23.3219,
-      "scraped_at": "2026-05-09T22:06:41.349860"
+      "scraped_at": "2026-05-10T13:59:22.932966"
     },
     {
-      "id": "vitosha_blvd_1778353602.587372",
+      "id": "vitosha_blvd_1778410764.074697",
       "street": "Vitosha Blvd",
       "disruption_type": "Road works",
       "start_date": "2024-05-10",
       "end_date": "2024-05-12",
       "latitude": 42.68556,
       "longitude": 23.3173991,
-      "scraped_at": "2026-05-09T22:06:42.587377"
+      "scraped_at": "2026-05-10T13:59:24.074703"
     },
     {
-      "id": "water_зона_на_спиране-кво_1403347_1778354008.532",
-      "street": "зона на спиране-кв.Орландовци -ул.Железопътна пред магазин Билла",
+      "id": "water_зона_на_спиране-грб_1403381",
+      "street": "Зона на спиране-гр.Банкя Ул. Есперанто от ул. Царибродска до ул. Восток",
       "disruption_type": "Water repair",
-      "description": "Осигурена водоноска",
-      "start_date": "2026-05-09",
+      "description": "Аварийно спиране",
+      "start_date": "2026-05-10",
       "end_date": "2026-05-10",
-      "latitude": 42.718238,
-      "longitude": 23.343138,
-      "scraped_at": "2026-05-09T19:13:28.531626+00:00",
+      "latitude": 42.712116,
+      "longitude": 23.141419,
+      "polygon": [
+        [
+          [
+            42.712215,
+            23.140689
+          ],
+          [
+            42.712164,
+            23.140694
+          ],
+          [
+            42.712306,
+            23.140668
+          ],
+          [
+            42.712673,
+            23.143065
+          ],
+          [
+            42.711731,
+            23.143248
+          ],
+          [
+            42.711506,
+            23.140877
+          ],
+          [
+            42.712215,
+            23.140689
+          ]
+        ]
+      ],
+      "scraped_at": "2026-05-10T11:09:49.318365+00:00",
       "source": "water_supply"
     }
   ]

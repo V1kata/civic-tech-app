@@ -1,11 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   MapContainer,
   TileLayer,
   Marker,
   Popup,
+  Polygon,
 } from "react-leaflet";
 import L from "leaflet";
 import { Legend } from "./Legend";
@@ -50,6 +51,7 @@ interface Disruption {
   end_date: string;
   latitude: number;
   longitude: number;
+  polygon?: number[][][];
   scraped_at: string;
 }
 
@@ -116,6 +118,13 @@ export default function Map() {
     return icon;
   };
 
+  // Get color for disruption type (for polygons)
+  const getColorForType = (type: string) => {
+    if (type.toLowerCase().includes("water")) return "#3b82f6"; // blue-500
+    if (type.toLowerCase().includes("road")) return "#ef4444"; // red-500
+    return "#3b82f6";
+  };
+
   return (
     <div className="w-full h-full relative pointer-events-none">
       {/* Loading state */}
@@ -147,17 +156,34 @@ export default function Map() {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         />
 
-        {/* Render markers for each disruption */}
+        {/* Render markers and polygons for each disruption */}
         {filteredDisruptions.map((disruption) => (
-          <Marker
-            key={disruption.id}
-            position={[disruption.latitude, disruption.longitude]}
-            icon={getIconForType(disruption.disruption_type)}
-          >
-            <Popup>
-              <DisruptionPopup disruption={disruption} />
-            </Popup>
-          </Marker>
+          <React.Fragment key={disruption.id}>
+            <Marker
+              position={[disruption.latitude, disruption.longitude]}
+              icon={getIconForType(disruption.disruption_type)}
+            >
+              <Popup>
+                <DisruptionPopup disruption={disruption} />
+              </Popup>
+            </Marker>
+
+            {/* Render polygon if available */}
+            {disruption.polygon && disruption.polygon.length > 0 && (
+              <Polygon
+                positions={disruption.polygon as any}
+                pathOptions={{ 
+                  color: getColorForType(disruption.disruption_type),
+                  fillColor: getColorForType(disruption.disruption_type),
+                  fillOpacity: 0.4
+                }}
+              >
+                <Popup>
+                  <DisruptionPopup disruption={disruption} />
+                </Popup>
+              </Polygon>
+            )}
+          </React.Fragment>
         ))}
       </MapContainer>
 
