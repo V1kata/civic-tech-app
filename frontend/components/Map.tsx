@@ -42,6 +42,15 @@ const waterIcon = L.icon({
   shadowSize: [41, 41],
 });
 
+const powerIcon = L.icon({
+  iconUrl: "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-yellow.png",
+  shadowUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png",
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41],
+});
+
 interface Disruption {
   id: string;
   street: string;
@@ -115,6 +124,7 @@ export default function Map() {
   const getIconForType = (type: string) => {
     if (type.toLowerCase().includes("water")) return waterIcon;
     if (type.toLowerCase().includes("road")) return roadWorksIcon;
+    if (type.toLowerCase().includes("power")) return powerIcon;
     return icon;
   };
 
@@ -122,6 +132,7 @@ export default function Map() {
   const getColorForType = (type: string) => {
     if (type.toLowerCase().includes("water")) return "#3b82f6"; // blue-500
     if (type.toLowerCase().includes("road")) return "#ef4444"; // red-500
+    if (type.toLowerCase().includes("power")) return "#facc15"; // yellow-400
     return "#3b82f6";
   };
 

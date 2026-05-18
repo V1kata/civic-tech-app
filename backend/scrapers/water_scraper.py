@@ -133,10 +133,10 @@ class WaterDisruptionScraper:
             original_type = attrs.get("ALERTTYPE")
             if not original_type or str(original_type).strip().lower() in ("null", "none", ""):
                 original_type = "Спиране на водата"
- 
+            
             results.append({
                 "id": self.make_id(str(attrs.get("ALERTID", "")), attrs.get("LOCATION", "")),
-                "street": attrs.get("LOCATION", "Unknown Location"),
+                "street": attrs.get("LOCATION", "Unknown Location").split(': ')[1],
                 "disruption_type": "Water repair",
                 "description": str(original_type),
                 "start_date": self.ms_to_date(attrs.get("START_")),
