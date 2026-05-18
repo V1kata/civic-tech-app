@@ -7,6 +7,7 @@ import {
   Marker,
   Popup,
   Polygon,
+  Polyline,
 } from "react-leaflet";
 import L from "leaflet";
 import { Legend } from "./Legend";
@@ -61,6 +62,7 @@ interface Disruption {
   latitude: number;
   longitude: number;
   polygon?: number[][][];
+  polyline?: number[][];
   scraped_at: string;
 }
 
@@ -170,14 +172,16 @@ export default function Map() {
         {/* Render markers and polygons for each disruption */}
         {filteredDisruptions.map((disruption) => (
           <React.Fragment key={disruption.id}>
-            <Marker
-              position={[disruption.latitude, disruption.longitude]}
-              icon={getIconForType(disruption.disruption_type)}
-            >
-              <Popup>
-                <DisruptionPopup disruption={disruption} />
-              </Popup>
-            </Marker>
+            {!(disruption.polyline && disruption.polyline.length > 0) && (
+              <Marker
+                position={[disruption.latitude, disruption.longitude]}
+                icon={getIconForType(disruption.disruption_type)}
+              >
+                <Popup>
+                  <DisruptionPopup disruption={disruption} />
+                </Popup>
+              </Marker>
+            )}
 
             {/* Render polygon if available */}
             {disruption.polygon && disruption.polygon.length > 0 && (
@@ -193,6 +197,22 @@ export default function Map() {
                   <DisruptionPopup disruption={disruption} />
                 </Popup>
               </Polygon>
+            )}
+
+            {/* Render polyline if available */}
+            {disruption.polyline && disruption.polyline.length > 0 && (
+              <Polyline
+                positions={disruption.polyline as any}
+                pathOptions={{ 
+                  color: getColorForType(disruption.disruption_type),
+                  weight: 5,
+                  opacity: 0.8
+                }}
+              >
+                <Popup>
+                  <DisruptionPopup disruption={disruption} />
+                </Popup>
+              </Polyline>
             )}
           </React.Fragment>
         ))}

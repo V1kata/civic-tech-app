@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
 
+export const dynamic = "force-dynamic";
+
 interface Disruption {
   id: string;
   street: string;
@@ -41,7 +43,7 @@ export async function GET(request: NextRequest) {
     const searchParams = request.nextUrl.searchParams;
     const typeFilter = searchParams.get("type");
     const limitParam = searchParams.get("limit");
-    const limit = limitParam ? parseInt(limitParam, 10) : 100;
+    const limit = limitParam ? parseInt(limitParam, 10) : 1000;
 
     // Path to the disruptions JSON file from the backend
     // In production, this might be a Supabase query instead
@@ -85,7 +87,7 @@ export async function GET(request: NextRequest) {
 
     // Add cache headers
     const response = NextResponse.json(data, { status: 200 });
-    response.headers.set("Cache-Control", "public, max-age=300, s-maxage=300"); // 5 minutes
+    response.headers.set("Cache-Control", "no-store, max-age=0");
     return response;
   } catch (error) {
     console.error("Error in GET /api/disruptions:", error);
